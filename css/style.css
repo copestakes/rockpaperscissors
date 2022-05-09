@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Permanent+Marker&display=swap');
+
+:root {
+    --primary-color: #97C4B8;
+    --dark-color: #525E75;
+    --light-color: #7c93bf;
+    --lose-color: #9a2632;
+    --win-color: #4bbe68;
+    --background: #edf6f4;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background: var(--dark-color);
+}
+
+.container {
+    max-width: 80%;
+    margin: 5% auto 0;
+    padding: 0 2rem;
+    text-align: center;
+    background: var(--background);
+}
+
+.restart-btn {
+    display: none;
+    background: var(--dark-color);
+    color: #fff;
+    padding: 0.7rem 1.3rem;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+}
+
+.restart-btn:hover {
+    background: var(--primary-color);
+}
+
+.header {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.header h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.score {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.score p:first-child {
+    background: var(--primary-color);
+}
+
+.score p:last-child {
+    background: var(--dark-color);
+}
+
+.choices {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    text-align: center;
+}
+
+.choice {
+    cursor: pointer;
+}
+
+.choice:hover {
+    color: var(--primary-color);
+}
+
+.text-win {
+    color: var(--win-color);
+}
+
+.text-lose {
+    color: var(--lose-color);
+}
+
+@media(max-width: 700px) {
+    .choice {
+        font-size: 110px;
+    }
+}
+
+@media(max-width: 500px) {
+    .choice {
+        font-size: 80px;
+    }
+}
